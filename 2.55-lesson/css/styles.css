@@ -59,7 +59,7 @@
 }
 
 .area__place--for-green {
-    transform: translate(98%, -52%) rotate(30deg);
+    transform: translate(98%, -52%) rotate(120deg);
 }
 
 .quads__quad--green {
@@ -67,9 +67,9 @@
 }
 
 .area__place--for-blue {
-    transform: translate(315.5%, -150%) scale(2);
+    transform: translate(315.5%, -150%) scale(2) rotate(180deg);
 }
 
 .quads__quad--blue {
-    transform: translate(418%, -148%) scale(2);
+    transform: translate(418%, -148%) scale(2) rotate(180deg);
 }
