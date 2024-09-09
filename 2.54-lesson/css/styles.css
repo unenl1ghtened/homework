@@ -1,0 +1,26 @@
+body {
+    background: #2b2b2b;
+    color: #fff;
+    padding-bottom: 10000px;
+}
+
+.quad {
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    right: 50px;
+    bottom: 100px;
+
+    min-height: 100px;
+    border-radius: 10px;
+}
+
+.quad__circle {
+    background: rgb(230, 50, 50);
+    border-radius: 1000px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+}
