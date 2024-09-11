@@ -34,6 +34,7 @@ body {
 .title::before {
     top: 50%;
     left: -150px;
+    transform: translateY(-50%);
     background: rgb(225, 102, 102);
 }
 
