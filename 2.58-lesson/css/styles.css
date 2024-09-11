@@ -49,3 +49,7 @@ body {
 .box:hover span, .box__scale{
     transition: right 1s, opacity 0.8s 1s;
 }
+
+.box span {
+    transition: opacity .4s 1s;
+}
