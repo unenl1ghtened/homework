@@ -17,30 +17,29 @@ body {
 
 /* ====================================================== */
 
-.wrapper {
+.title {
     position: relative;
 }
 
-.title::before {
-    content: '';
-    position: absolute;
-    display: block;
-    transform: translate(-160%);
-    height: 100px;
-    width: 100px;
-    background: rgb(225, 102, 102);
-    border-radius: 50%;
-    border: #fff 6px solid;
-}
-
+.title::before,
 .title::after {
     content: '';
     position: absolute;
-    display: block;
-    transform: translate(440%, -75%);
     height: 100px;
     width: 100px;
-    background: rgb(112, 102, 225);
     border-radius: 50%;
-    border: #fff 6px solid;
+    border: #fff 5px solid;
+}
+
+.title::before {
+    top: 50%;
+    left: -150px;
+    background: rgb(225, 102, 102);
+}
+
+.title::after {
+    background: rgb(85, 102, 177);
+    top: 50%;
+    transform: translateY(-50%);
+    right: -150px;
 }
