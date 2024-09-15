@@ -1,6 +1,10 @@
 :root {
-    --bg-color: #F8FCFF;
-    --action-text-color: #1D6FB6;
+    --bg-color: #F8FCFF; /* Основной цвет фона */
+    --action-text-color: #1D6FB6; /* Основной цвет текста действий */
+    --secondary-bg-color: #d0dce7; /* Второстепенный цвет фона и границ */
+    --hover-color: #83ADD3; /* Цвет при наведении */
+    --footer-bg-color: #788088; /* Цвет фона футера */
+    --text-color: #25282B; /* Основной цвет текста */
 
 }
 
@@ -117,21 +121,23 @@ body {
 }
 
 .button {
-    line-height: 20px;
+    display: block;
+    width: 100%;
+    line-height: calc(16 / 20);
     font-weight: 500;
     font-size: 16px;
     border-radius: 100px;
     padding: 18px 30px;
-    max-width: 288px;
+    max-width: 289px;
     height: 56px;
     text-align: center;
-    background: var(--bg-color);
+    background: var(--secondary-bg-color);
     color: var(--action-text-color);
     transition: all .5s;
 }
 
 .button:hover {
-    background: #83add3;
+    background: var(--hover-color);
     color: var(--bg-color);
 }
 
@@ -143,22 +149,34 @@ body {
 
 .main__wrapper {
     display: flex;
-    gap: 126px;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+}
+
+.main__sidebar {
+    position: sticky;
+    top: 5vh;
 }
 
 .main__body {
     width: 100%;
+    max-width: 792px;
+}
+
+.main__gallery {
+    margin-bottom: 120px;
 }
 
 .sidebar {
-    border: 2px solid #d0dce7;
-    color: #25282B;
+    border: 2px solid var(--secondary-bg-color);
+    color: var(--text-color);
     padding: 30px;
     max-width: 282px;
     width: 100%;
+    min-height: 60vh;
 
     font-weight: 500;
-    line-height: 20px;
     font-size: 16px;
 }
 
@@ -179,7 +197,6 @@ body {
     grid-auto-flow: dense;
     gap: 24px;
     color: #f8fcff;
-    line-height: 20px;
     font-weight: 500;
 }
 
@@ -202,12 +219,11 @@ body {
 .gallery__img img {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .gallery__img:hover .gallery__hint {
@@ -238,4 +254,82 @@ body {
     font-size: 24px;
     line-height: 29px;
     height: 102px;
+}
+
+/* =========================================== */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.products__item-img {
+    position: relative;
+    padding-bottom: 62%;
+}
+
+.products__item-badge {
+    position: absolute;
+    left: 0;
+    top: 13%;
+
+    background: #f8fcff;
+    color: #1d6fb6;
+    border-radius: 0 100px 100px 0;
+    padding: 18px 15px;
+    min-width: 33.9%;
+    font-weight: 500;
+    text-align: center;
+
+    animation: badge-action 2s infinite alternate;
+}
+
+@keyframes badge-action {
+    0% {
+        min-width: 33.9%;
+    }
+
+    66.666% {
+        min-width: 33.9%;
+    }
+
+    100% {
+        min-width: 37.3%;
+    }
+}
+
+.products__item-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.products__item-body {
+    border: 1px solid #D0DCE7;
+    border-top: none;
+    padding: 30px 15px;
+}
+
+.products__item-button {
+    margin: 0 auto;
+}
+
+/* ==================================== */
+
+.footer {
+    padding: 30px 0;
+    background: var(--footer-bg-color);
+    color: var(--bg-color);
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
