@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-size: 24px;">
+    <pre>
+        1) Создайте функцию, которая в качестве аргумента будет принимать имя, а возвращать строчку ‘Hello “аргумент функции”’.
+        2) Создайте массив чисел, далее создайте функцию, которая будет принимать в качестве аргумента массив чисел. Функция должна перебирать полученный массив и если число больше 10 - выводить это число в консоль.
+        3) Предлагаю вам реализовать простенький калькулятор. Создайте функцию, которая будет принимать три аргумента, два числа и строку для выбора оператора. При вызове функции пользователь передает, например, (2, 3, ‘minus’), внутри функции происходит проверка на знак и в данном случае функция должна вернуть -1. То есть мы получаем разницу между первым и вторым аргументом. Запишите результат выполнения функции в переменную и выведите в консоль. Подобным образом реализуйте 4 математические операции: сложение, вычитание, умножение и деление.
+    </pre>
+
+</body>
+    <script>
+        function returnName (name) {
+            return `Hello ${name}`;
+        }
+        console.log(returnName('Alex'));
+
+        const numbers = [1, 2, 3, 4, 5, 11, 20];
+        function checkNumbers (array) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > 10) {
+                    console.log(array[i]);
+                }
+            }
+        }
+        checkNumbers(numbers);
+
+        function calculator (firstNumber, secondNumber, operator) {
+            if (operator === 'subtraction') {
+                console.log(firstNumber - secondNumber);
+            } else if (operator === 'addition') {
+                console.log(firstNumber + secondNumber);
+            } else if (operator === 'multiplication') {
+                console.log(firstNumber * secondNumber);
+            } else if (operator === 'division') {
+                console.log(firstNumber / secondNumber);
+            } else {
+                console.log('There is no such operation');   
+            }
+        };
+
+        calculator(5, 3, 'division');
+        
+    </script>
+</html>

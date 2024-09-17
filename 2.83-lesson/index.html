@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body style="font-size: 24px;">
+    <pre>
+        1) Создайте объект с вашим описанием(имя, возраст и т.д.).
+        2) Создайте метод объекта, который в качестве аргумента будет принимать имя и возвращать строку ‘Hello “переданный аргумент”’.
+        3) Создайте массив объектов с описанием пользователей(такой мы делали в уроке). Объявите отдельную переменную, в которой будет храниться количество простых пользователей, начальное значение будет - 0. Обойдите массив пользователей и если пользователь не является админом - прибавьте к ранее созданной переменной единицу. После окончания работы цикла выведите в консоль переменную с количеством простых пользователей.
+    </pre>
+
+</body>
+<script>
+    const object1 = {
+        name: 'Margarita',
+        surName: 'Rozkova',
+        age: '16',
+        sayHello(name) {
+            console.log(`Hello ${name}`);
+        }
+    };
+    object1.sayHello('John');
+
+    const users = [
+        {
+            firstName: 'John',
+            lastName: 'Doe',
+            isAdmin: false
+        },
+        {
+            firstName: 'Alex',
+            lastName: 'Owen',
+            isAdmin: true
+        },
+        {
+            firstName: 'Anthony',
+            lastName: 'Gates',
+            isAdmin: false
+        },
+        {
+            firstName: 'Everita',
+            lastName: 'Smyth',
+            isAdmin: true
+        },
+        {
+            firstName: 'Nathan',
+            lastName: 'Drake',
+            isAdmin: false
+        },
+        {
+            firstName: 'Tony',
+            lastName: 'Stark',
+            isAdmin: false
+        }
+    ]
+
+    let nonAdminUsers = 0;
+    for(let i = 0; i < users.length; i++) {
+        if(users[i].isAdmin === false) {
+            nonAdminUsers++;
+        }
+    }
+    console.log(nonAdminUsers);
+</script>
+
+</html>
