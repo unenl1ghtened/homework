@@ -1,7 +1,5 @@
-// let randomNumber = Math.random();
-// console.log(randomNumber);
 // Если число больше или равно нулю, но меньше 0.3 = камень
-// Если число больше или равно 0.4, но меньше 0.6 = бумага
+// Если число больше или равно 0.3, но меньше 0.6 = бумага
 // Если число больше или рано 0.6, но меньше 1 = ножницы
 
 let computerMove = '';
@@ -18,7 +16,7 @@ function playGame(move) {
 
     let randomNumber = Math.random();
 
-    //ход компьютеры
+    //ход компьютерa
     if (randomNumber >= 0 && randomNumber < 0.3) {
         computerMove = 'rock';
     } else if (randomNumber >= 0.3 && randomNumber < 0.6) {
