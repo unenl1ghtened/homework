@@ -14,11 +14,8 @@ body {
 }
 
 .wrapper {
-    /* чтобы блочный элемент (сам врапер) растягивался полностью по вертикали*/
     min-height: 100%;
-    /* всегда будет не больше и не меньше ширины экрана */
     width: 100%;
-    /* если какой-то контент будет шире экрана, то он обрезается и горизонтальный скроллбар не появится */
     overflow: hidden;
 
     display: flex;
@@ -63,7 +60,7 @@ body {
 /* =================================== */
 
 .header {
-    background: url(/img/decor/header-bg.png) 50% 100% / cover no-repeat;
+    background: url(./img/decor/header-bg.png) 50% 100% / cover no-repeat;
 }
 
 .header__top {
