@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="body">
     <div class="wrapper">
         <header class="header">
             <div class="header__top">
@@ -41,6 +41,9 @@
                                 </li>
                             </ul>
                         </nav>
+                        <a class="hamburger-menu" href="#">
+                            <div class="hamburger"></div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -59,12 +62,18 @@
                                 За 8 практических занятий ты получишь новые возможности для самореализации и любимое
                                 дело
                             </p>
+                            <div class="hero__img-control hero__img-control--mobile">
+                                <a class="hero__play-button" data-fslightbox href="./media/cake.mp4">
+                                    <img src="./img/icons/play.svg" alt="">
+                                </a>
+                                Посмотри, как готовятся наши торты
+                            </div>
                             <a class="hero__button button" href="#">Записаться на курс</a>
                         </div>
                         <div class="hero__img">
                             <img src="./img/content/girl.png" alt="Девушка с тортом">
                             <div class="hero__img-control">
-                                <a class="hero__play-button" data-fslightbox="gallery" href="./media/cake.mp4">
+                                <a class="hero__play-button" data-fslightbox="video" href="./media/cake.mp4">
                                     <img src="./img/icons/play.svg" alt="">
                                 </a>
                                 Посмотри, как готовятся наши торты
@@ -80,4 +89,5 @@
 </body>
 <script src="./js/fslightbox.js"></script>
 <script src="./js/main.js"></script>
+
 </html>
