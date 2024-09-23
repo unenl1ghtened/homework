@@ -6,7 +6,7 @@
         const target = e.target;
         const bodyClasses = document.body.classList;
 
-        const burgerIcon = target.closest('.hamburger-menu');
+        const burgerIcon = target.closest('.burger-icon');
         const burgerNavLink = target.closest('.nav__link');
 
         if (!burgerIcon && !burgerNavLink) return;
