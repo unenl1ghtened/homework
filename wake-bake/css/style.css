@@ -571,7 +571,7 @@
     max-width: 501px;
     display: grid;
     gap: 40px;
-    grid-template: repeat(3, auto) / 0.85fr .8fr;
+    grid-template: repeat(3, auto) / 1.65fr 1fr;
 }
 
 .program__discount {
