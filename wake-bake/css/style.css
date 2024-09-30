@@ -560,7 +560,7 @@
 .program__bottom {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 10px;
 }
 
 .program__bottom-img img {
