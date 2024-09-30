@@ -640,6 +640,7 @@
 
 .program__bottom-button {
     grid-column: 1 / -1;
+    cursor: pointer;
 }
 
 .tab-content__program-bottom {
