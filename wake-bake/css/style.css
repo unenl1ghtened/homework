@@ -551,6 +551,7 @@
     justify-content: space-between;
     align-items: end;
     margin-bottom: 40px;
+    gap: 40px;
 }
 
 .program__title {
@@ -610,6 +611,7 @@
         transform: translateX(0%) scale(1);
         color: var(--accent-color);
     }
+
     100% {
         transform: translateX(10%) scale(1.1);
         color: #ff9138;
@@ -619,6 +621,7 @@
 .program__discount-price-big {
     align-self: flex-end
 }
+
 .program__discount-price-text {
     line-height: 160%;
     text-transform: uppercase;
@@ -682,9 +685,9 @@
 }
 
 .accordion-list__item {
-    border: 1px solid #ffa55c;
+    border: 1px solid var(--accent-color);
     border-radius: 20px;
-    padding: 40px 30px;
+
     margin-bottom: 30px;
 }
 
@@ -693,18 +696,24 @@
 }
 
 .accordion-list__control {
+    padding: 40px 30px;
+    gap: 15px;
+    width: 100%;
+    text-align: left;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
+    align-items: top;
+    font-size: inherit;
     background: transparent;
-}
 
-.accordion-list__control-title {
     font-family: "Gabriola", sans-serif;
     font-size: 42px;
     line-height: .9;
+    transition: var(--transition);
+}
+
+.accordion-list__item--opened .accordion-list__control {
+    padding-bottom: 20px;
 }
 
 .accordion-list__control-img {
@@ -753,7 +762,7 @@
 
 .content__inner {
     display: flex;
-    justify-content: space-between;
+    padding: 0 30px 40px;
     gap: 80px;
 }
 
@@ -947,6 +956,23 @@
         grid-column: 1 / -1;
         margin-top: 40px;
     }
+
+    /* ------------- */
+    .program__top {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 40px;
+    }
+    .tab-control {
+        flex-wrap: wrap;
+    }
+    .accordion-list__control {
+        padding: 25px 30px;
+        font-size: 35px;
+    }
+    .content__inner {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -980,6 +1006,16 @@
     }
 
     /* --------------------- */
+
+    .program__bottom-grid {
+        max-width: none;
+        grid-template: repeat(3, auto) / minmax(280px, 1fr) 1fr;
+    }
+    .program__bottom-img {
+        display: none;
+    }
+
+    /* -------------- */
 
     .footer__inner {
         grid-template-columns: repeat(2, 1fr);
@@ -1052,6 +1088,30 @@
     .info__desc {
         margin-bottom: 0;
     }
+
+    /* ----------- */
+
+    .program__inner {
+        padding: 60px 0;
+    }
+    .tab-control {
+        gap: 10px;
+    }
+    .tab-control__link {
+        padding: 8px 20px;
+    }
+    .content__inner {
+        flex-direction: column;
+    }
+    .content__theory, .content__practice {
+        flex-direction: column;
+    }
+    .content__theory {
+        max-width: none;
+    }
+    .content__practice-text {
+        max-width: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1079,6 +1139,52 @@
 
 
     /* ------------------- */
+    .program__title {
+        text-align: center;
+    }
+
+    .program__top {
+        text-align: center;
+        align-items: center;
+    }
+
+    .accordion-list__item {
+        margin-bottom: 10px;
+    }
+
+    .tab-control {
+        justify-content: center;
+    }
+
+    .accordion-list__control {
+        padding: 17px 30px;
+        font-size: 28px;
+    }
+
+    .accordion-list__control-img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .accordion-list__control-img img {
+        width: 10px;
+    }
+
+    .program__bottom-grid {
+        grid-template: repeat(3, auto) / repeat(2, auto);
+    }
+
+    .program__discount-price-big {
+        justify-content: start;
+    }
+
+    .program__discount {
+        grid-row: auto;
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    /* ------------------ */
 
     .footer__inner {
         grid-template-columns: auto;
@@ -1122,5 +1228,27 @@
 
     .modal__window {
         padding: 0 20px 35px;
+    }
+
+    /* ------------- */
+    
+    .accordion-list__control {
+        padding: 17px 15px;
+    }
+
+    .content__inner {
+        padding: 0 15px 30px;
+    }
+
+    .content__theory-item {
+        margin-bottom: 10px;
+    }
+
+    .program__bottom-grid {
+        grid-template: none;
+        gap: 15px;
+    }
+    .program__discount-price {
+        text-align: center;
     }
 }
