@@ -666,7 +666,7 @@
 
 .contact {
     padding: 140px 0;
-    background: url("../img/decor/footer-bg.png") 50% 0% / cover no-repeat;
+    background: url("./img/decor/footer-bg.png") 50% 0% / cover no-repeat;
 }
 
 .contact__inner {
@@ -677,14 +677,14 @@
 }
 
 .contact__inner::before {
-    content: url("../img/decor/footer-blueberries.png");
+    content: url("./img/decor/footer-blueberries.png");
     position: absolute;
     top: -4%;
     left: 0%;
 }
 
 .contact__inner::after {
-    content: url("../img/decor/footer-blueberried-2.png");
+    content: url("./img/decor/footer-blueberried-2.png");
     position: absolute;
     top: 4%;
     right: 0%;
