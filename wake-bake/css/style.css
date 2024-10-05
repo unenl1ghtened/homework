@@ -950,6 +950,7 @@
         display: none;
     }
 
+
     .gallery__desc {
         max-width: none;
     }
@@ -1148,6 +1149,10 @@
         margin-bottom: 20px;
     }
 
+    .gallery__body {
+        flex-direction: column;
+    }
+    
     .testimonials__slide-inner {
         flex-direction: column;
         align-items: center;
@@ -1156,6 +1161,7 @@
     .swiper-wrapper.testimonials__wrapper {
         margin-bottom: 20px;
     }
+
 
     /* ---------------------- */
 
