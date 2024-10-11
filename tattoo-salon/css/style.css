@@ -184,8 +184,9 @@
     justify-content: center;
     align-items: center;
 }
+
 .testimonials-prev,
-.testimonials-next{
+.testimonials-next {
     transform: translateY(-60%)
 }
 
@@ -197,6 +198,10 @@
 .testimonials-next {
     grid-row: 3 / -3;
     grid-column: 3;
+}
+
+.testimonials__client-photos {
+    max-width: 222px;
 }
 
 .testimonials__client-photos img {
@@ -221,16 +226,17 @@
     margin-bottom: 66px;
 }
 
-.testimonials__client-photos--large {
+.testimonials__client-photos--large,
+.testimonials__client-photos.active {
     transform: scale(1.5);
-    margin: 0 24px;
+    /* margin: 0 24px; */
 }
 
 .testimonials__photos-inner {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    /* gap: 24px; */
 }
 
 .testimonials__slider {
@@ -285,6 +291,77 @@
     background: #a07652;
 }
 
+/* ========================================== */
+/* .faq {
+    margin-bottom: 160px;
+} */
+
+.faq__container {
+    max-width: 1017px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.faq__title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.accordion-list__item {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    ;
+    margin-bottom: 32px;
+}
+
+.accordion-list__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 15px;
+    background: transparent;
+    width: 100%;
+}
+
+.accordion-list__control-title {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 32px;
+}
+
+.accordion-list__control--active .accordion-list__control-plus {
+    display: none;
+}
+
+.accordion-list__control--active .accordion-list__control-minus {
+    display: flex;
+}
+
+.accordion-list__control-minus {
+    display: none;
+    transform: translateY(-100%);
+}
+
+.accordion-list__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.accordion-content {
+    padding: 0px 35px 32px 24px;
+    line-height: 1.5;
+}
+
+.accordion-content__item {
+    list-style-type: decimal;
+}
+
+.accordion-content__item span {
+    font-weight: 900;
+}
 
 
 
@@ -526,6 +603,10 @@
         padding: 80px 0;
     }
 
+    .main__faq {
+        padding-bottom: 80px;
+    }
+
     .about__inner {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -580,6 +661,19 @@
 
     /* ------------- */
 
+    .accordion-list__control-title {
+        font-size: 18px;
+    }
+
+    .accordion-list__control-title {
+        margin-bottom: 24px;
+    }
+
+    .accordion-content {
+        padding: 0px 0px 24px 24px;
+    }
+
+    /* ------------- */
     .newsletter-title {
         font-size: 40px;
     }
