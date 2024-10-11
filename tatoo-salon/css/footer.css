@@ -1,0 +1,143 @@
+
+.footer {
+    position: relative;
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.5fr;
+    align-items: center;
+    padding: 244px 0 64px 0;
+}
+
+.footer__nav {
+    border-left: 3px solid var(--accent-color);
+    padding-left: 52px;
+
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff4ebcc;
+}
+
+.footer__item {
+    margin-bottom: 34px;
+}
+
+.footer__item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__link {
+    padding: 4px 0;
+
+    transition: var(--transition);
+}
+
+.footer__link:hover {
+    color: var(--accent-color);
+}
+
+.socials__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.newsletter {
+    background: url(../img/decor/footer-bg.png) 50% 50% / cover no-repeat;
+    margin: 0 auto;
+    max-width: 1150px;
+    position: sticky;
+    z-index: 1;
+    transform: translateY(50%);
+}
+
+.newsletter__inner {
+    display: flex;
+    padding: 70px 71px 70px 163px;
+    gap: 64px;
+    text-align-last: left;
+    max-width: 1067.5px;
+}
+
+.newsletter__converts {
+    max-width: 277.17px;
+}
+
+.newsletter__converts img {
+    width: 100%;
+}
+
+.newsletter-title {
+    font-family: "Angel rhapsody", sans-serif;
+    font-size: 64px;
+    color: #12100c;
+    margin-bottom: 32px;
+}
+
+.newsletter__input {
+    border-radius: 12px;
+    padding: 24.8px 32px;
+    max-width: 345px;
+    width: 100%;
+    background: #f2e4da;
+    position: relative;
+}
+
+.newsletter__input::placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    color: #483524;
+}
+
+.newsletter__button {
+    position: absolute;
+    transform: translateX(-50px);
+    background: #db9f6a;
+    border-radius: 12px;
+    padding: 22px 32px;
+
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: #483524;
+}
+
+.footer__bottom {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.footer__bottom-inner {
+    border-top: 1px solid #db9f6a33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 52px;
+}
+
+.footer__bottom-legal-terms {
+    color: #fff4ebcc;
+    display: flex;
+    gap: 52px;
+    transition: var(--transition);
+}
+
+.footer__bottom-legal-terms p {
+    transition: var(--transition);
+}
+
+.footer__bottom-legal-terms p:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.footer__bottom-copy {
+    text-align: right;
+    color: #fff4eb66;
+}

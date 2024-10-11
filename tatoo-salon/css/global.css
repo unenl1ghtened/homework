@@ -1,0 +1,46 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5vw;
+}
+
+.body {
+    font-family: "Satoshi Variable", Arial, Helvetica, sans-serif;
+    background: #12100C;
+    color: #FFF4EB;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+    background: url(../img/bg/main-bg.png) 50% 50% / cover repeat;
+}
+
+.container {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.title {
+    font-family: "Angel rhapsody", Arial, sans-serif;
+    font-size: 64px;
+    color: #fff4eb;
+}
+
+/* ====================================================== */
+
