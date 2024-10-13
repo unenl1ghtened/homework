@@ -10,6 +10,16 @@
     padding: 244px 0 64px 0;
 }
 
+.footer__logo {
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+
+.footer__logo img {
+    width: 100%;
+}
+
 .footer__nav {
     border-left: 3px solid var(--accent-color);
     padding-left: 52px;
@@ -99,6 +109,7 @@
     background: #db9f6a;
     border-radius: 12px;
     padding: 22px 32px;
+    height: 70px;
 
     font-weight: 700;
     font-size: 18px;
