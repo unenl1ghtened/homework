@@ -51,6 +51,8 @@
 
     const avatarSliders = document.querySelectorAll('.testimonials__client-photos');
     const testimonialSlider = new Swiper('#testimonial-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
         navigation: {
             nextEl: '.testimonials-next',
             prevEl: '.testimonials-prev',
@@ -71,25 +73,21 @@
             }
         });
 
-        // Проверяем ширину экрана
         if (window.innerWidth < 700) {
-            // Обновляем порядок фотографий
             avatarSliders.forEach((slider, index) => {
                 if (index === activeIndex) {
-                    slider.style.order = '0'; // Центральное положение для активного
+                    slider.style.order = '0';
                 } else {
                     slider.style.order = index < activeIndex ? '1' : '2'; // Сдвиг влево или вправо
                 }
             });
         } else {
-            // Сбрасываем порядок для экранов больше 700px
             avatarSliders.forEach((slider) => {
                 slider.style.order = 'initial';
             });
         }
     }
 
-    // Инициализация первого слайда
     updateAvatarSlider();
 
 
