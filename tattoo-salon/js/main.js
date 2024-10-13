@@ -4,11 +4,8 @@
 
     function burgerInit(e) {
         const burgerIcon = e.target.closest('.burger-icon');
-        const burgerNavLink = e.target.closest('.nav__link-oppened');
+        const burgerNavLink = e.target.closest('.nav__link-opened');
 
-        if (burgerIcon) {
-            console.log('да');
-        }
 
         if (!burgerIcon && !burgerNavLink) return;
         if (document.documentElement.clientWidth > 1200) return;
@@ -19,6 +16,32 @@
             document.body.classList.remove('body--opened-menu');
         }
     }
+
+    //modal
+
+    const modal = document.querySelector('.contact-form');
+    const modalButton1 = document.querySelector('.awards__button');
+    const modalButton2 = document.querySelector('.about__action-button');
+
+    modalButton1.addEventListener('click', openModal);
+    modalButton2.addEventListener('click', openModal);
+    modal.addEventListener('click', closeModal);
+
+    function openModal(e) {
+        e.preventDefault();
+        document.body.classList.toggle('body--opened-contact');
+    }
+
+    function closeModal(e) {
+        e.preventDefault();
+
+        const target = e.target;
+
+        if (target.classList.contains('contact-form')) {
+            document.body.classList.remove('body--opened-contact');
+        }
+    }
+
 
     //photos
     const nextBtn = document.querySelector('.testimonials-next');
