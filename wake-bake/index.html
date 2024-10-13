@@ -1094,28 +1094,30 @@
     </div>
     <div class="modal">
         <div class="modal__window">
-            <img class="modal__img" src="./img/decor/cupcakes.png" alt="капкейки">
             <a class="modal__cancel" href="#">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="11.25" stroke="#E1D9E1" stroke-width="1.5" />
                     <path
                         d="M6.75781 17.2433L12.0008 12.0003L17.2438 17.2433M17.2438 6.75732L11.9998 12.0003L6.75781 6.75732"
                         stroke="#E1D9E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="11.25" stroke="#E1D9E1" stroke-width="1.5" />
                 </svg>
             </a>
+            <img class="modal__img" src="img/decor/cupcakes-modal.png" alt="">
             <h3 class="modal__title">
                 Удиви своих близких вкусными капкейками
             </h3>
             <p class="modal__text">
                 Оставь свой e-mail, и мы вышлем рецепт на почту
             </p>
-            <label class="modal__email field">
-                <input class="field__input" type="email" placeholder="E-mail">
-                <span>Введите e-mail</span>
-            </label>
-            <a class="button modal__button" href="#">
-                Получить подарок
-            </a>
+            <form class="modal__form">
+                <label class="modal__form-label field">
+                    <input class="field__input" type="email" placeholder="E-mail">
+                    <span>Введите e-mail</span>
+                </label>
+                <button class="button" type="submit">
+                    Получить подарок
+                </button>
+            </form>
         </div>
     </div>
 
