@@ -16,26 +16,28 @@
         }
     }
 
-    const modal = document.querySelector('.modal');
-    const openMod = document.querySelector('.main__info-button');
+    //modal
+    
+    const modal = document.querySelector('.modal')
+    const modalButton = document.querySelector('.about__info-button')
 
-    modal.addEventListener('click', closeModal);
-    openMod.addEventListener('click', openModal);
+    modalButton.addEventListener('click', openModal)
+    modal.addEventListener('click', closeModal)
 
     function openModal(e) {
-        e.preventDefault();
-
-        document.body.classList.toggle('body--opened-modal');
+        e.preventDefault()
+        document.body.classList.toggle('body--opened-modal')
     }
 
     function closeModal(e) {
-        e.preventDefault();
+        e.preventDefault()
 
-        const target = e.target;
+        const target = e.target
 
-        if (target.closest('.modal__cancel') || target.classList.contains('.modal__window')) {
-            document.body.classList.remove('body--opened-modal');
+        if (target.closest('.modal__cancel') || target.classList.contains('modal')) {
+            document.body.classList.remove('body--opened-modal')
         }
+
     }
 
     //tabs
