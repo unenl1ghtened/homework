@@ -864,6 +864,12 @@
         justify-content: left;
     }
 
+    /* -------------- */
+
+    .main__faq {
+        padding-bottom: 160px;
+    }
+
     /* ------------- */
 
     .newsletter {
@@ -994,7 +1000,8 @@
 
     .main__desc,
     .main__awards,
-    .main__testimonials {
+    .main__testimonials,
+    .main__faq {
         padding-bottom: 80px;
     }
 
