@@ -1090,6 +1090,10 @@
         margin: 0 -5px;
     }
 
+    .testimonials__quote {
+        padding: 32px 24px;
+    }
+
     /* ------------- */
 
     .accordion-list__control-title {
