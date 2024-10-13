@@ -10,6 +10,7 @@ html {
     font-size: 20px;
     letter-spacing: -0.02em;
     scrollbar-width: thin;
+    zoom: 0.8;
 }
 
 ::-webkit-scrollbar {
