@@ -564,6 +564,15 @@
     ::-webkit-scrollbar-thumb:hover {
         background: #777;
     }
+
+    .footer__link:hover {
+        color: var(--accent-color);
+    }
+
+    .footer__bottom-legal-terms p:hover {
+        color: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
 @media (hover: none) {
@@ -590,6 +599,15 @@
 
     ::-webkit-scrollbar-thumb:active {
         background: #777;
+    }
+
+    .footer__link:active {
+        color: var(--accent-color);
+    }
+
+    .footer__bottom-legal-terms p:active {
+        color: var(--accent-color);
+        cursor: pointer;
     }
 }
 
