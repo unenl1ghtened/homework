@@ -68,10 +68,10 @@
         avatarSliders.forEach((slider, index) => {
             if (index === activeIndex) {
                 slider.classList.add('active');
-                slider.style.transitionDelay = '0.3s'; // Delay before scaling
+                slider.style.transitionDelay = '0.3s';
             } else {
                 slider.classList.remove('active');
-                slider.style.transitionDelay = '0s'; // No delay for non-active slides
+                slider.style.transitionDelay = '0s'; 
             }
         });
 
@@ -80,7 +80,7 @@
                 if (index === activeIndex) {
                     slider.style.order = '0';
                 } else {
-                    slider.style.order = index < activeIndex ? '1' : '2'; // Shift left or right
+                    slider.style.order = index < activeIndex ? '1' : '2';
                 }
             });
         } else {
@@ -90,7 +90,6 @@
         }
     }
 
-    // Call the function initially to set the correct active state
     updateAvatarSlider();
 
 
