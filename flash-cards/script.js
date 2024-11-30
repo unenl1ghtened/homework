@@ -172,17 +172,13 @@ const questions = [
   },
 ];
 
-let currentCardIndex = -1;
+let isSingleCardMode = true; // По умолчанию режим одной карточки
 
-// Функция для отображения случайной карточки
+// Функция для отображения одной карточки
 function showRandomCard() {
-  // Генерируем случайный индекс
-  currentCardIndex = Math.floor(Math.random() * questions.length);
-
-  // Получаем текущую карточку
+  const currentCardIndex = Math.floor(Math.random() * questions.length);
   const currentCard = questions[currentCardIndex];
 
-  // Создаём элементы для карточки
   const card = document.createElement("div");
   card.className = "card";
 
@@ -207,14 +203,66 @@ function showRandomCard() {
   card.appendChild(answerElement);
   card.appendChild(toggleButton);
 
-  // Вставляем карточку в контейнер
   const container = document.getElementById("card-container");
-  container.innerHTML = ""; // Очищаем контейнер перед добавлением новой карточки
+  container.innerHTML = ""; // Очистка контейнера
   container.appendChild(card);
 }
 
-// Обработчик нажатия на стрелочку
+// Функция для отображения списка карточек
+function showCardList() {
+  const container = document.getElementById("card-container");
+  container.innerHTML = ""; // Очистка контейнера
+
+  questions.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const questionElement = document.createElement("div");
+    questionElement.className = "question";
+    questionElement.textContent = item.question;
+
+    const answerElement = document.createElement("div");
+    answerElement.className = "answer";
+    answerElement.textContent = item.answer;
+
+    const toggleButton = document.createElement("button");
+    toggleButton.textContent = "Show Answer";
+    toggleButton.addEventListener("click", () => {
+      card.classList.toggle("show-answer");
+      toggleButton.textContent = card.classList.contains("show-answer")
+        ? "Hide Answer"
+        : "Show Answer";
+    });
+
+    card.appendChild(questionElement);
+    card.appendChild(answerElement);
+    card.appendChild(toggleButton);
+    container.appendChild(card);
+  });
+}
+
+// Функция переключения режима
+function toggleMode() {
+  isSingleCardMode = !isSingleCardMode; // Переключение режима
+  const modeButton = document.getElementById("toggle-mode");
+  const nextCardButton = document.getElementById("next-card");
+
+  if (isSingleCardMode) {
+    modeButton.textContent = "Switch to List Mode";
+    nextCardButton.style.display = "block";
+    showRandomCard();
+  } else {
+    modeButton.textContent = "Switch to Single Card Mode";
+    nextCardButton.style.display = "none";
+    showCardList();
+  }
+}
+
+// Обработчик кнопки переключения режима
+document.getElementById("toggle-mode").addEventListener("click", toggleMode);
+
+// Обработчик кнопки "Next Card"
 document.getElementById("next-card").addEventListener("click", showRandomCard);
 
-// Показываем первую карточку сразу при загрузке
+// Показать первую карточку при загрузке
 showRandomCard();
