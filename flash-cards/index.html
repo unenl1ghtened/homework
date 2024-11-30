@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flash Cards</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 55%;
+      }
+      .card {
+        width: 300px;
+        height: 200px;
+        border: 2px solid #000;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        transition: transform 0.3s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .question {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .answer {
+        margin-top: 10px;
+        display: none;
+        font-size: 16px;
+        color: #555;
+      }
+      .card.show-answer .answer {
+        display: block;
+      }
+      .card.show-answer .question {
+        color: #aaa;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .arrow-button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #28a745;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card-container"></div>
+    <button id="next-card" class="arrow-button">➡️ Next Card</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
